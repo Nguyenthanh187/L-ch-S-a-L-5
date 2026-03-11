@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <title>Trang học tập lớp 5</title>
@@ -7,7 +8,8 @@
 <style>
 
 body{
-font-family: Arial;
+margin:0;
+font-family: Arial, sans-serif;
 text-align:center;
 
 background-image: url("bando.jpg");
@@ -16,49 +18,64 @@ background-position: center;
 background-attachment: fixed;
 }
 
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(255,255,255,0.6);
-z-index:-1;
+/* lớp phủ làm mờ nền */
+
+.overlay{
+background: rgba(255,255,255,0.7);
+min-height:100vh;
+padding-top:60px;
 }
 
-/* Ô Lịch sử - Địa lý */
+/* tiêu đề */
+
+h1{
+background:white;
+display:inline-block;
+padding:15px 40px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* container */
+
+.container{
+margin-top:120px;
+display:flex;
+justify-content:center;
+gap:120px;
+}
+
+/* box */
 
 .box{
-width:220px;
-height:120px;
+width:260px;
+height:150px;
 
 display:flex;
 justify-content:center;
 align-items:center;
 
 background:white;
-border-radius:10px;
-box-shadow:0 0 10px gray;
+border-radius:20px;
 
-font-size:24px;
+font-size:30px;
 font-weight:bold;
-}
 
-a{
-text-decoration:none;
-color:black;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+transition:0.3s;
 }
 
 .box:hover{
 background:#dceeff;
+transform:scale(1.08);
 }
 
-h1{
-background:rgba(255,255,255,0.8);
-display:inline-block;
-padding:10px 30px;
-border-radius:10px;
+/* link */
+
+a{
+text-decoration:none;
+color:black;
 }
 
 </style>
@@ -66,6 +83,8 @@ border-radius:10px;
 </head>
 
 <body>
+
+<div class="overlay">
 
 <h1>TRANG HỌC TẬP LỚP 5</h1>
 
@@ -81,5 +100,8 @@ border-radius:10px;
 
 </div>
 
+</div>
+
 </body>
+
 </html>
